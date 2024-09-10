@@ -47,9 +47,10 @@ export default function RootLayout() {
           }}
         >
           <Drawer.Screen
-            name="(surah)"
-            options={{ title: "Mobile Qur'an Al-Faaza" }}
+            name="(home)"
+            options={{ title: "Assalaamu'alaikum" }}
           />
+          <Drawer.Screen name="(surah)" options={{ title: "Al-Qur'an" }} />
         </Drawer>
       </PaperProvider>
     </ThemeProvider>

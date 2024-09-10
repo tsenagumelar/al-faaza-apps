@@ -21,60 +21,22 @@ const SurahDetail = () => {
     <View style={styles.container}>
       <LinearGradient
         colors={["#33cc33", "#29a329", "#1f7a1f"]}
-        style={{
-          width: "100%",
-          height: "20%",
-          borderRadius: 20,
-          marginBottom: 30,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        style={styles.surahBox}
       >
         <ImageBackground
           source={icons.quran}
           resizeMode="contain"
-          imageStyle={{
-            opacity: 0.25,
-            width: "100%",
-            height: 100,
-          }}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderBottomColor: "black",
-            paddingBottom: 5,
-            marginBottom: 5,
-            borderBottomWidth: 1,
-          }}
+          imageStyle={styles.surahImage}
+          style={styles.surahImageBox}
         >
-          <Text
-            style={{
-              fontSize: 30,
-              fontWeight: "bold",
-              color: "white",
-            }}
-          >
+          <Text style={styles.surahTranslation}>
             {surah.name.transliteration.id}
           </Text>
-          <Text
-            style={{
-              fontSize: 16,
-              fontStyle: "italic",
-              color: "white",
-            }}
-          >
+          <Text style={styles.surahTranslationId}>
             {surah.name.translation.id}
           </Text>
         </ImageBackground>
-        <Text
-          style={{
-            fontSize: 16,
-            fontStyle: "italic",
-            color: "white",
-          }}
-        >
+        <Text style={styles.surahAyat}>
           {`${surah.numberOfVerses} Ayat - ${surah.revelation.id}`}
         </Text>
       </LinearGradient>

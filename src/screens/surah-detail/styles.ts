@@ -62,4 +62,42 @@ export const styles = StyleSheet.create({
     textAlign: "left",
     marginVertical: 10,
   },
+  surahBox: {
+    width: "100%",
+    height: "20%",
+    borderRadius: 20,
+    marginBottom: 30,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  surahImage: {
+    opacity: 0.25,
+    width: "100%",
+    height: 100,
+  },
+  surahImageBox: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderBottomColor: "black",
+    paddingBottom: 5,
+    marginBottom: 5,
+    borderBottomWidth: 1,
+  },
+  surahTranslation: {
+    fontSize: 30,
+    color: "white",
+    fontWeight: "bold",
+  },
+  surahTranslationId: {
+    fontSize: 16,
+    fontStyle: "italic",
+    color: "white",
+  },
+  surahAyat: {
+    fontSize: 16,
+    fontStyle: "italic",
+    color: "white",
+  },
 });
