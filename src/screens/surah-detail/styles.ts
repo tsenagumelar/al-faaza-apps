@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+    backgroundColor: "#FFF",
     paddingHorizontal: 20,
   },
   verseContainer: {

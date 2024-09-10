@@ -6,6 +6,8 @@ export interface ThemeIcons {
   play: ImageSourcePropType;
   share: ImageSourcePropType;
   quran: ImageSourcePropType;
+  home: ImageSourcePropType;
+  book: ImageSourcePropType;
 }
 
 const Icons: ThemeIcons = {
@@ -14,6 +16,8 @@ const Icons: ThemeIcons = {
   play: require("../assets/icons/play.png"),
   share: require("../assets/icons/share.png"),
   quran: require("../assets/icons/quran.png"),
+  home: require("../assets/icons/home.png"),
+  book: require("../assets/icons/book.png"),
 };
 
 export default Icons;

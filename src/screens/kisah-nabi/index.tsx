@@ -1,6 +1,6 @@
 import { Text, View } from "react-native";
 
-const Home = () => {
+const KisahNabi = () => {
   return (
     <View
       style={{
@@ -8,9 +8,9 @@ const Home = () => {
         backgroundColor: "#fff",
       }}
     >
-      <Text>HOME</Text>
+      <Text>Kisah Nabi</Text>
     </View>
   );
 };
 
-export default Home;
+export default KisahNabi;

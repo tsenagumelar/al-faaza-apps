@@ -20,7 +20,7 @@ const SurahList = () => {
         data={methods.getSurahList()}
         keyExtractor={(item) => item.number.toString()}
         renderItem={({ item, index }) => (
-          <Link key={index} href={`/detail?query=${item.number}`} asChild>
+          <Link key={index} href={`/quran?query=${item.number}`} asChild>
             <TouchableOpacity style={styles.item}>
               <View style={styles.chapterIconContainer}>
                 <ImageBackground

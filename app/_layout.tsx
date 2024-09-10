@@ -12,6 +12,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { PaperProvider } from "react-native-paper";
 
 import { useColorScheme } from "@/src/hooks/useColorScheme";
+import { Stack } from "expo-router";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -32,26 +33,32 @@ export default function RootLayout() {
     return null;
   }
 
+  const StackNav = () => {
+    return (
+      <Stack
+        screenOptions={{
+          statusBarHidden: false,
+          contentStyle: {
+            padding: 10,
+            backgroundColor: "#fff",
+          },
+        }}
+      >
+        <Stack.Screen
+          name="(tabs)"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+    );
+  };
+
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <PaperProvider>
-        <Drawer
-          screenOptions={{
-            sceneContainerStyle: {
-              backgroundColor: "#fff",
-            },
-            headerStyle: {
-              borderBottomWidth: 2,
-              borderBottomColor: "#f2f2f2",
-            },
-          }}
-        >
-          <Drawer.Screen
-            name="(home)"
-            options={{ title: "Assalaamu'alaikum" }}
-          />
-          <Drawer.Screen name="(surah)" options={{ title: "Al-Qur'an" }} />
-        </Drawer>
+        <StackNav />
       </PaperProvider>
     </ThemeProvider>
   );
