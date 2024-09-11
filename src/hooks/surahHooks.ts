@@ -1,4 +1,3 @@
-import surahJSON from "@/src/data/quran.json";
 import listSurahJSON from "@/src/data/list-surah.json";
 import Surahs from "../constants/surah";
 
@@ -129,7 +128,6 @@ export interface Id {
 }
 
 const surahHooks = () => {
-  const quran: Root = surahJSON;
   const listSurah: Root = listSurahJSON;
 
   const getSurahList = () => {
