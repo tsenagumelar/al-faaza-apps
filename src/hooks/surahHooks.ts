@@ -1,4 +1,6 @@
 import surahJSON from "@/src/data/quran.json";
+import listSurahJSON from "@/src/data/list-surah.json";
+import Surahs from "../constants/surah";
 
 export interface Root {
   license?: string;
@@ -128,15 +130,14 @@ export interface Id {
 
 const surahHooks = () => {
   const quran: Root = surahJSON;
+  const listSurah: Root = listSurahJSON;
 
   const getSurahList = () => {
     const surahList: Daum[] = [];
-    quran &&
-      quran.data &&
-      quran.data.map((item) => {
+    listSurah &&
+      listSurah.data &&
+      listSurah.data.map((item) => {
         const surah = { ...item };
-        delete surah.verses;
-        delete surah.preBismillah;
         surahList.push(surah);
       });
 
@@ -144,11 +145,7 @@ const surahHooks = () => {
   };
 
   const getSurah = (surah: number) => {
-    let data: any = {};
-    if (quran && quran.data) {
-      data = quran.data[surah - 1];
-    }
-    return data as Daum;
+    return Surahs[surah];
   };
 
   return {

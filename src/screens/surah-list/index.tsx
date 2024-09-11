@@ -7,9 +7,9 @@ import {
 } from "react-native";
 import { Link } from "expo-router";
 
+import useHooks from "./hooks";
 import { styles } from "./styles";
 import icons from "@/src/constants/icons";
-import useHooks from "./hooks";
 
 const SurahList = () => {
   const { methods } = useHooks();

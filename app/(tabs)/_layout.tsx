@@ -24,6 +24,7 @@ const TabLayout = () => {
           backgroundColor: "red",
           justifyContent: "center",
           marginBottom: focused ? 10 : 0,
+          elevation: focused ? 5 : 0,
         }}
       >
         <Image
